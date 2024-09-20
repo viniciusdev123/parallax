@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <title>Parallax</title>
+        <style type="text/css">
+
+            /*Configuração padrão da página */
+            body, html {
+                margin: 0;
+                font: 16px "Lato", sans-serif;
+                color:  #777;
+                height: 100%; /*Vai fazer com que o body sempre expanda em 100%. É interessante quando tem imagem, já que vai aparecer por completo*/
+            }
+
+            .conteudo {
+                color: #777;
+                background-color: white;
+                text-align: justify;
+                padding: 50px 80px;
+            }
+
+            h3 {
+                text-transform: uppercase;
+                color: #111;
+                text-align: center;
+            }
+
+            p {
+                margin-bottom: 20px;
+            }
+            /*fim/Configuração padrão da página */
+
+            /****************
+            Efeito Parallax
+            *****************/
+            .caixa1, .caixa2, .caixa3, .caixa4, .caixa5, .caixa6 { /*essa vai ser a formatação padrão da caixa, pois desta forma não será necessário ficar aplicando as mesmas formatações nas demais caixas, economizando tempo e otimizando o código.*/
+                position: relative; /*Para conseguirmos tornar a classe 'conteudo-titulo' relativa a nossa caixa para que consigamos alinhar a letra*/
+                height: 100%; /*Vai mostrar 100% da tela. É bem mais interessante quando se tem uma imagem*/
+                opacity: 0.7; /*Defini uma opacidade. OBS: no 1, a imagem fica normal e conforme for abaixando, ela vai diminuindo a opacidade, ou seja, caso a opacidade seja 0, a imagem vai não vai se tornar vísivel, já que o nivel de opacidade vai estar no limite.*/
+                background-repeat: no-repeat;
+                background-size: cover; /*Devido à configuração 'no-repeat' acabou que sobrou um espaço em branco na direita. Para resolver isso usarei o cover (cobrir) */
+                background-position: center; /*Para quando eu reduzir a página, a imagem ficar centralizada */
+                background-attachment: fixed; /*vai ativar o efeito Parallax, fazendo com que a imagem fique fixa conforme formos descendo a página */
+                
+            }
+
+            .caixa1 {/*Agora vou adicionar apenas a imagem, pois já defini as formatações de uma vez só*/
+                background-image: url(imagens/imagem1.jpg);
+            }
+
+            .caixa2 {
+                background-image: url(imagens/imagem2.jpg);
+
+            }
+
+            .caixa3 {
+                background-image: url(imagens/imagem3.jpg);
+            }
+
+            .caixa4 {
+                background-image: url(imagens/imagem4.jpg);
+            }
+
+            .caixa5 {
+                background-image: url(imagens/imagem5.jpg);
+            }
+
+            .caixa6 {
+                background-image: url(imagens/imagem6.jpg);
+            }
+
+
+
+            .conteudo-titulo {
+                position: absolute; /*Vai ser absoluta ao tamanho da caixa*/
+                left: 0;  
+                top: 50%;
+                width: 100%;
+                text-align: center; 
+
+            }
+
+            .conteudo-titulo span.titulo {
+                text-transform: uppercase;
+                color: #fff;
+                background-color: #111;
+                padding: 18px;
+                font-size: 25px;
+                letter-spacing: 5px; /*Espaçamento de 5px entre as letras*/
+                
+            }
+
+
+        </style>
+
+    </head>
+
+    <body>
+        
+        <div class="caixa1">
+
+            <div class="conteudo-titulo">
+                <span class="titulo">passeio de balões</span>
+            </div>
+
+        </div>
+
+        <div class="conteudo">
+            <h3>Parallax</h3>
+            <p>Suspendisse sit amet lectus risus. Sed at orci non eros efficitur commodo lacinia a erat. Cras quis quam ut augue egestas tristique. Etiam et varius mi, sed dignissim dui. Nam sed massa sem. Nulla facilisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet gravida tortor, id pretium orci. Curabitur ut finibus lacus. Donec posuere ligula eget lacinia iaculis. Praesent in placerat magna, luctus sodales purus. Suspendisse potenti. Mauris quam velit, mollis finibus egestas sed, consequat id arcu. Etiam massa erat, consequat euismod arcu id, ornare blandit ex.</p>
+            <p>Suspendisse sit amet lectus risus. Sed at orci non eros efficitur commodo lacinia a erat. Cras quis quam ut augue egestas tristique. Etiam et varius mi, sed dignissim dui. Nam sed massa sem. Nulla facilisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet gravida tortor, id pretium orci. Curabitur ut finibus lacus. Donec posuere ligula eget lacinia iaculis. Praesent in placerat magna, luctus sodales purus. Suspendisse potenti. Mauris quam velit, mollis finibus egestas sed, consequat id arcu. Etiam massa erat, consequat euismod arcu id, ornare blandit ex.</p>
+        </div>
+
+        <div class="caixa2">
+            <div class="conteudo-titulo">
+                <span class="titulo">pegando a estrada</span>
+            </div>
+        </div>
+
+        <div class="conteudo">
+            <h3>Parallax</h3>
+            <p>Suspendisse sit amet lectus risus. Sed at orci non eros efficitur commodo lacinia a erat. Cras quis quam ut augue egestas tristique. Etiam et varius mi, sed dignissim dui. Nam sed massa sem. Nulla facilisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet gravida tortor, id pretium orci. Curabitur ut finibus lacus. Donec posuere ligula eget lacinia iaculis. Praesent in placerat magna, luctus sodales purus. Suspendisse potenti. Mauris quam velit, mollis finibus egestas sed, consequat id arcu. Etiam massa erat, consequat euismod arcu id, ornare blandit ex.</p>
+            <p>Suspendisse sit amet lectus risus. Sed at orci non eros efficitur commodo lacinia a erat. Cras quis quam ut augue egestas tristique. Etiam et varius mi, sed dignissim dui. Nam sed massa sem. Nulla facilisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet gravida tortor, id pretium orci. Curabitur ut finibus lacus. Donec posuere ligula eget lacinia iaculis. Praesent in placerat magna, luctus sodales purus. Suspendisse potenti. Mauris quam velit, mollis finibus egestas sed, consequat id arcu. Etiam massa erat, consequat euismod arcu id, ornare blandit ex.</p>
+        </div>
+
+        <div class="caixa3">
+            <div class="conteudo-titulo">
+                <span class="titulo">pôr do sol</span>
+            </div>
+        </div>
+
+        <h3>Parallax</h3>
+        <p>Suspendisse sit amet lectus risus. Sed at orci non eros efficitur commodo lacinia a erat. Cras quis quam ut augue egestas tristique. Etiam et varius mi, sed dignissim dui. Nam sed massa sem. Nulla facilisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet gravida tortor, id pretium orci. Curabitur ut finibus lacus. Donec posuere ligula eget lacinia iaculis. Praesent in placerat magna, luctus sodales purus. Suspendisse potenti. Mauris quam velit, mollis finibus egestas sed, consequat id arcu. Etiam massa erat, consequat euismod arcu id, ornare blandit ex.</p>
+        <p>Suspendisse sit amet lectus risus. Sed at orci non eros efficitur commodo lacinia a erat. Cras quis quam ut augue egestas tristique. Etiam et varius mi, sed dignissim dui. Nam sed massa sem. Nulla facilisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet gravida tortor, id pretium orci. Curabitur ut finibus lacus. Donec posuere ligula eget lacinia iaculis. Praesent in placerat magna, luctus sodales purus. Suspendisse potenti. Mauris quam velit, mollis finibus egestas sed, consequat id arcu. Etiam massa erat, consequat euismod arcu id, ornare blandit ex.</p>
+
+
+        <div class="caixa4">
+            <div class="conteudo-titulo">
+                <span class="titulo">montanhas</span>
+            </div>
+        </div>
+
+        <h3>Parallax</h3>
+        <p>Suspendisse sit amet lectus risus. Sed at orci non eros efficitur commodo lacinia a erat. Cras quis quam ut augue egestas tristique. Etiam et varius mi, sed dignissim dui. Nam sed massa sem. Nulla facilisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet gravida tortor, id pretium orci. Curabitur ut finibus lacus. Donec posuere ligula eget lacinia iaculis. Praesent in placerat magna, luctus sodales purus. Suspendisse potenti. Mauris quam velit, mollis finibus egestas sed, consequat id arcu. Etiam massa erat, consequat euismod arcu id, ornare blandit ex.</p>
+        <p>Suspendisse sit amet lectus risus. Sed at orci non eros efficitur commodo lacinia a erat. Cras quis quam ut augue egestas tristique. Etiam et varius mi, sed dignissim dui. Nam sed massa sem. Nulla facilisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet gravida tortor, id pretium orci. Curabitur ut finibus lacus. Donec posuere ligula eget lacinia iaculis. Praesent in placerat magna, luctus sodales purus. Suspendisse potenti. Mauris quam velit, mollis finibus egestas sed, consequat id arcu. Etiam massa erat, consequat euismod arcu id, ornare blandit ex.</p>
+
+
+        <div class="caixa5">
+            <div class="conteudo-titulo">
+                <span class="titulo">Passeio em alto mar</span>
+            </div>
+        </div>
+
+        <h3>Parallax</h3>
+        <p>Suspendisse sit amet lectus risus. Sed at orci non eros efficitur commodo lacinia a erat. Cras quis quam ut augue egestas tristique. Etiam et varius mi, sed dignissim dui. Nam sed massa sem. Nulla facilisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet gravida tortor, id pretium orci. Curabitur ut finibus lacus. Donec posuere ligula eget lacinia iaculis. Praesent in placerat magna, luctus sodales purus. Suspendisse potenti. Mauris quam velit, mollis finibus egestas sed, consequat id arcu. Etiam massa erat, consequat euismod arcu id, ornare blandit ex.</p>
+        <p>Suspendisse sit amet lectus risus. Sed at orci non eros efficitur commodo lacinia a erat. Cras quis quam ut augue egestas tristique. Etiam et varius mi, sed dignissim dui. Nam sed massa sem. Nulla facilisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet gravida tortor, id pretium orci. Curabitur ut finibus lacus. Donec posuere ligula eget lacinia iaculis. Praesent in placerat magna, luctus sodales purus. Suspendisse potenti. Mauris quam velit, mollis finibus egestas sed, consequat id arcu. Etiam massa erat, consequat euismod arcu id, ornare blandit ex.</p>
+
+
+        <div class="caixa6">
+            <div class="conteudo-titulo">
+                <span class="titulo">Praia privada</span>
+            </div>
+        </div>
+
+        <h3>Parallax</h3>
+        <p>Suspendisse sit amet lectus risus. Sed at orci non eros efficitur commodo lacinia a erat. Cras quis quam ut augue egestas tristique. Etiam et varius mi, sed dignissim dui. Nam sed massa sem. Nulla facilisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet gravida tortor, id pretium orci. Curabitur ut finibus lacus. Donec posuere ligula eget lacinia iaculis. Praesent in placerat magna, luctus sodales purus. Suspendisse potenti. Mauris quam velit, mollis finibus egestas sed, consequat id arcu. Etiam massa erat, consequat euismod arcu id, ornare blandit ex.</p>
+        <p>Suspendisse sit amet lectus risus. Sed at orci non eros efficitur commodo lacinia a erat. Cras quis quam ut augue egestas tristique. Etiam et varius mi, sed dignissim dui. Nam sed massa sem. Nulla facilisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet gravida tortor, id pretium orci. Curabitur ut finibus lacus. Donec posuere ligula eget lacinia iaculis. Praesent in placerat magna, luctus sodales purus. Suspendisse potenti. Mauris quam velit, mollis finibus egestas sed, consequat id arcu. Etiam massa erat, consequat euismod arcu id, ornare blandit ex.</p>
+
+
+
+    </body>
+
+</html>
